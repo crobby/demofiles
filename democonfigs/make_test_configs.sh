@@ -11,4 +11,4 @@ oc create configmap clusterconfig --from-literal=sparkmasterconfig=masterconfig 
                                   --from-literal=sparkworkerconfig=workerconfig \
                                   --from-literal=workercount=3
 
-oc create configmap setworkers --from-literal=workercount=5
+oc create configmap setworkers --from-literal=workercount=3
