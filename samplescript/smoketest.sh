@@ -1,17 +1,7 @@
 #!/bin/sh
 
-## Just pass the cluster name to this script
-#  it will login and figure out the pods/deployments and stuff
-#  and then it will run a quick spark example job on one of the
-#  worker nodes.
-# the optional second argument is the length of pause from the
-# issuing of the env var setting to the actual running of the
-# test
-
-
 CLUSTERNAME=$1
 WORKERDEPLOYMENT="${CLUSTERNAME}-w"
-#SPARKMASTER="${CLUSTERNAME}:7077"
 
 oc login -u developer -p dev
 oc project myproject
