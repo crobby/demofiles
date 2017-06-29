@@ -11,6 +11,9 @@ echo "Waiting 15 seconds for cluster to come up"
 sleep 15
 oshinko get democluster -o json
 
+echo "********** Scaling to 6 workers"
+oshinko scale democluster --workers=6
+
 echo "***********Running sample program"
 ./smoketest.sh democluster
 
